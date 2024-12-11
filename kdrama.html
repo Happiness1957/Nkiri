@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Korean</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <section class="heard">
+      <nav>
+        <div class="logo">
+          <img src="image/logo (N).png" alt="logo" />
+        </div>
+        <i class="fa fa-bars" aria-hidden="true" id="menu-toggle"></i>
+        <ul id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Chinese Drama.html">Chinese Drama</a></li>
+          <li><a href="kdrama.html">K-drama</a></li>
+          <li><a href="tv series.html">TV Series</a></li>
+          <li><a href="#">Movies</a></li>
+          <li><a href="#">Genre</a></li>
+          <li><a href="#">How to download</a></li>
+         
+        </ul>
+        <i
+          class="fa fa-times"
+          aria-hidden="true"
+          id="menu-close"
+          style="display: none"
+        ></i>
+
+        <h5><span>Menu</span></h5>
+      </nav>
+    </section>
+
+    <div class="drama-img">
+      <a href="Chinese Drama.html">
+        <img src="image/drama-img.jpeg" alt="" />
+        <img src="image/drama-img.jpeg" alt="" />
+      </a>
+    </div>
+    <div class="search">
+      <h5>Search for what to download here</h5>
+      <input type="text" placeholder="search here" id="search-input" />
+      <div class="suggestions" id="suggestions-container"></div>
+    </div>
+
+    <!-- new drama------------ -->
+    <section class="new-drama">
+      <h1>New Drama Uploads</h1>
+      <div class="row">
+        <div class="drama-col">
+          
+          <a class="play" onclick="toggleVideo();">
+            <img src="image/ironfamily.jpg" alt="" />
+          </a>
+          <p>Iron Family S01 (Episode 9 & 10 Added) | Korean Drama</p>
+          <div class="trailer">
+            <video
+              src="image/Kill.Me.Love.Me.E01.(DRAMAKEY.COM).mkv"
+              controls
+            ></video>
+            <img
+              src="image/ironfamily.jpg"
+              class="close"
+              onclick="toggleVideo();"
+            />
+          </div>
+        </div>
+        <div class="drama-col">
+          <img src="image/hellbound.jpg" alt="" />
+          <p>Hellbound S02 (Complete) | Korean Drama</p>
+        </div>
+        <div class="drama-col">
+          <img src="image/dog-knows-everything.jpg" alt="" />
+          <p>Dog Knows Everything S01 (Episode 10 Added) | Korean Drama</p>
+        </div>
+        <div class="drama-col">
+          <img src="image/the-brave-yong-su-jeong.jpg" alt="" />
+          <p>The Brave Yong Soo-jung S01 (Episode 109 Added) | Korean Drama</p>
+        </div>
+        <div class="drama-col">
+          <img src="image/the-judge-from-hell.jpg" alt="" />
+          <p>The Judge from Hell S01 (Episode 12 Added) | Korean Drama</p>
+        </div>
+        <div class="drama-col">
+          <img src="image/scandal-korean-drama.jpg" alt="" />
+          <p>Scandal S01 (Episode 77 & 78 Added) | Korean Drama</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="drama-col">
+          <img src="image/my-merry-marriage.jpg" alt="" />
+          <p>My Merry Marriage S01 (Episode 14 & 15 Added) | Korean Drama</p>
+        </div>
+        <div class="drama-col">
+          <img src="image/what-comes-after-love.jpg" alt="" />
+          <p>What Comes After Love S01 (Complete) | Korean Drama</p>
+        </div>
+        <div class="drama-col">
+          <img src="image/doubt.jpg" alt="" />
+          <p>Doubt S01 (Episode 5 Added) | Korean Drama</p>
+        </div>
+        <div class="drama-col">
+          <img src="image/the-brave-yong-su-jeong.jpg" alt="" />
+          <p>The Brave Yong Soo-jung S01 (Episode 109 Added) | Korean Drama</p>
+        </div>
+        <div class="drama-col">
+          <img src="image/jeongnyeon-the-star-is-born.jpg" alt="" />
+          <p>
+            Jeongnyeon the Star Is Born S01 (Episode 6 Added) | Korean Drama
+          </p>
+        </div>
+        <div class="drama-col">
+          <img src="image/eccentric.jpeg" alt="" />
+          <p>Eccentric</p>
+        </div>
+      </div>
+    </section>
+    <div class="more-drama">
+      <h3>Load More Drama</h3>
+    </div>
+    <div class="drama-img">
+      <img src="image/drama-img.jpeg" alt="" />
+    </div>
+
+     <!----------footer---------->
+ <section class="footer">
+  <h4>About Us</h4>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt <br />
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+  </p>
+  <div class="icons">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-linkedin"></i>
+  </div>
+  <p>Made With <i class="fa fa-heart-o"></i> by HAPPINESS</p>
+</section>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const menuClose = document.getElementById("menu-close");
+      const navMenu = document.getElementById("nav-menu");
+
+      menuToggle.addEventListener("click", function () {
+        navMenu.style.display = "flex"; // Show menu
+        menuToggle.style.display = "none"; // Hide bars icon
+        menuClose.style.display = "block"; // Show close icon
+      });
+
+      menuClose.addEventListener("click", function () {
+        navMenu.style.display = "none"; // Hide menu
+        menuToggle.style.display = "block"; // Show bars icon
+        menuClose.style.display = "none"; // Hide close icon
+      });
+
+      const suggestions = [
+  "Iron Family",
+  "Hellbound",
+  "Dog Knows Everything",
+  "The Brave Yong Soo-jung",
+  "The Judge from Hell",
+  "Scandal",
+  "My Merry Marriage",
+  "What Comes After Love",
+  "Doubt",
+  "Jeongnyeon the Star Is Born",
+  "Eccentric"
+];
+
+const searchInput = document.getElementById("search-input");
+const suggestionsContainer = document.getElementById("suggestions-container");
+
+searchInput.addEventListener("focus", () => {
+  // Show suggestions when input is focused
+  suggestionsContainer.style.display = "flex"; 
+  renderSuggestions(suggestions);
+});
+
+searchInput.addEventListener("input", () => {
+  const value = searchInput.value.toLowerCase();
+  const filteredSuggestions = suggestions.filter(suggestion =>
+    suggestion.toLowerCase().includes(value)
+  );
+  renderSuggestions(filteredSuggestions);
+});
+
+document.addEventListener("click", (e) => {
+  if (!suggestionsContainer.contains(e.target) && e.target !== searchInput) {
+    suggestionsContainer.style.display = "none"; // Hide when clicked outside
+  }
+});
+
+function renderSuggestions(items) {
+  suggestionsContainer.innerHTML = "";
+  items.forEach(item => {
+    const suggestionItem = document.createElement("div");
+    suggestionItem.classList.add("suggestion-item");
+    suggestionItem.textContent = item;
+    suggestionsContainer.appendChild(suggestionItem);
+
+    suggestionItem.addEventListener("click", () => {
+      searchInput.value = item; // Set input to clicked suggestion
+      suggestionsContainer.style.display = "none"; // Hide suggestions
+    });
+  });
+}
+      function toggleVideo() {
+        const trailer = document.querySelector(".trailer");
+        const video = document.querySelector("video");
+        trailer.classList.toggle("active");
+        video.currentTime = 0;
+        video.pause();
+      }
+    </script>
+  </body>
+</html>

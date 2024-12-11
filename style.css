@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  padding: 0 20px;
+  border-bottom: 1px solid #808080;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+.logo img {
+  width: 90px;
+  margin: 20px 0;
+}
+
+
+#nav-menu {
+  display: flex; 
+  align-items: center; 
+}
+
+
+nav h5{
+  display: none;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.logo img {
+  width: 90px;
+  margin: 20px 0;
+ 
+}
+
+
+
+ul li {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+  list-style: none;
+  padding: 8px 12px;
+  position: relative;
+  color: black;
+  
+}
+
+ul li a {
+  display: flex;
+  color: #4d4d4d;
+  text-decoration: none;
+}
+
+
+
+ul li a:hover {
+  color: #6ca0dc; 
+  background: transparent;
+}
+
+.notice {
+  max-width: 80%; 
+width: 100%;
+background: lightblue;
+padding: 12px;
+font-size: 14px;
+font-weight: 300;
+border-left: 5px solid #6ca0dc;
+margin: 15px auto;
+text-align: left;
+}
+
+.notice h5 {
+  color: #6ca0dc;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.notice .fa-times {
+  color: #6ca0dc;
+  cursor: pointer;
+}
+
+.notice p {
+  line-height: 1.6;
+  color: rgb(0, 41, 128);
+  text-align: left;
+}
+
+.drama-img {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.drama-img img {
+  max-width: 100%; 
+  height: auto;
+}
+
+
+.search {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+ 
+}
+.search input{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+
+}
+
+.suggestions {
+  display: none; 
+  flex-direction: column; 
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%; 
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-height: 200px; 
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+
+nav .fa {
+  display: none;
+}
+
+
+
+@media (max-width: 700px) {
+#nav-menu {
+  display: none; 
+    flex-direction: column; 
+    position: absolute; 
+    top: 60px; 
+    left: 0;
+    width: 100%;
+    background: white; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+
+}
+  
+
+#nav-menu.active {
+    display: flex; 
+}
+
+
+nav .fa {
+    display: block; 
+}
+
+ul li {
+    display: block; 
+    font-size: 14px;
+    font-weight: 300;
+    list-style: none;
+    padding: 8px 12px;
+}
+
+  .notice {
+    width: 100%;
+    margin: 10px auto;
+    font-weight: 200;
+    font-size: 12px;
+  }
+
+  .drama-img {
+    margin: 20px auto;
+  }
+
+  .drama-img img {
+    width: 95%;
+  }
+
+  .search {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .nav h5{
+    display: block;
+  }
+
+}
+/* -----------new drama------- */
+
+.new-drama {
+  padding: 20px;
+}
+
+.new-drama h1 {
+  text-align: left;
+  padding: 10px 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 140px;
+}
+.row {
+  max-width: 80%; 
+  width: 100%;
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+ 
+}
+.drama-col {
+  flex-basis: 15%;
+ 
+  margin-bottom: 30px;
+  margin-left: 10px;
+  position: relative;
+ 
+  border: 1px solid #808080;
+  justify-content: space-between;
+}
+
+.drama-col img{
+  width: 100%;
+  display: flex;
+
+}
+
+.drama-col p{
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+@media (max-width: 700px) {
+
+  .new-drama .row {
+   max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+  }
+ 
+
+  .drama-col {
+    width: 100%;
+  }
+}
+
+.more-drama{
+  max-width: 80%; 
+width: 100%;
+background: #6ca0dc;
+font-size: 14px;
+font-weight: 300;
+margin: 15px auto;
+text-align: left;
+}
+.more-drama  h3{
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.trailer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  visibility: hidden;
+  opacity: 0;
+}
+.trailer.active {
+  visibility: visible;
+  opacity: 1;
+}
+.trailer video {
+  max-width: 700px;
+  outline: none;
+}
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+ 
+}
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.footer p {
+  color: #777;
+}
+.icons .fa {
+  color: #6ca0dc;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+.fa-heart-o {
+  color:  #6ca0dc;
+}
